@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontoklass</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Inköp</title>
+    <style>
+        .row, .row1 {
+            display: flex;
+        }
+
+        .row p, .row1 p {
+            margin: 0;
+            padding: 25px;
+            border: 1px black dotted;
+            min-width: 380px;
+            min-height: 30px;
+            text-align: center;
+        }
+
+        
+
+        
+
+    </style>
+</head>
+
+<body>
+
+
+
+    <h2>Inköp</h2>
+
+    <input type="radio" name="buy" id="swe" value="swe" checked >
+    <label for="swe">Inom Sverige</label>
+
+    <input type="radio" name="buy" id="eu" value="eu">
+    <label for="eu">Inom EU</label>
+
+    <input type="radio" name="buy" id="world" value="world">
+    <label for="world">Utanför EU</label>
+
+
+
+
+
+    <h2>Välj momssats</h2>
+
+    <input type="radio" name="procent" id="0" value="0" >
+    <label for="0">0 %</label>
+
+    <input type="radio" name="procent" id="6" value="0.06">
+    <label for="6">6 %</label>
+
+    <input type="radio" name="procent" id="12" value="0.12">
+    <label for="12">12 %</label>
+
+    <input type="radio" name="procent" id="25" value="0.25" checked>
+    <label for="25"> 25 %</label>
+
+
+
+
+    <h2>Ange den totala summan:</h2>
+    <input type="number" id="totalSumma" placeholder="total summa" min="0">
+
+    <button id="countPrice" value="Räkna" onclick="count();">Räkna</button>
+
+    <br><br>
+
+    <div id="whole" style="display: none;">
+        <div class="row">
+            <div> <p>Kontoklass</p> </div>
+            <div><p>Debit</p> </div>
+            <div> <p>Kredit</p> </div>
+        </div>
+
+        <div class="row">
+            <div> <p id="kontoklass">1930 Bankkonto</p> </div>
+            <div><p id="kontoklassDebit">Debit</p> </div>
+            <div> <p id="kontoklassKredit">Kredit</p> </div>
+        </div>
+        <div class="row" id="momsRow">
+            <div> <p id="kontoklass1">Kontoklass</p> </div>
+            <div><p id="kontoklass1Debit">Debit</p> </div>
+            <div> <p id="kontoklass1Kredit">Kredit</p> </div>
+        </div>
+        <div class="row">
+            <div> <p id="kontoklass2">Kontoklass</p> </div>
+            <div><p id="kontoklass2Debit">Debit</p> </div>
+            <div> <p id="kontoklass2Kredit">Kredit</p> </div>
+        </div>
+        <div class="row1">
+            <div> <p id="kontoklass3">Kontoklass</p> </div>
+            <div><p id="kontoklass3Debit">Debit</p> </div>
+            <div> <p id="kontoklass3Kredit">Kredit</p> </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
+
+<!--  
+Dont accept negative numbers, but cant insert number with decimals
+=====================================================
+<input type="number" id="totalSumma" placeholder="total summa" min="0" oninput="this.value = 
+    !!this.value && Math.abs(this.value) >= 0 ? Math.abs(this.value) : null"> 
+
+
+-->
+</body>
+</html>
